@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,10 +9,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
+        buttonSendEmail: "#f8f1ee",
         foreground: "var(--foreground)",
       },
     },
   },
   plugins: [],
 };
+//HEX: #f8f1ee pozadi stranek
+//HEX: #0c0802 barva textu

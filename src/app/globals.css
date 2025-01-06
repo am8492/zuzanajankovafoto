@@ -1,21 +1,153 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #0c0802;
+  background-color: #f8f1ee;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  --color-main: #f8f1ee;
+  --color-secondary: white;
+  padding: 0px;
+  margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box; /* Ensures padding and borders are included in the element's width/height */
+}
+.image-main {
+  width: 100%; /* Full width */
+  height: 100vh; /* Full height, filling the viewport */
+  object-fit: cover; /* Ensures the image scales without distortion */
+  display: inline-flex;
+  padding: 0px;
+  margin: 0%;
+}
+a {
+  color: black;
+  font-size: 18px;
+  text-decoration: none;
+}
+.titleH2 {
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  margin-top: 5%;
+  letter-spacing: 1.1rem;
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  font-size: 40px;
+  font-weight: 300;
+}
+.titleH3 {
+  justify-content: center;
+  text-align: justify;
+  display: flex;
+  margin-top: 5%;
+  letter-spacing: 1.2rem;
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  font-size: 32px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.titleH4 {
+  justify-content: center;
+  text-align: justify;
+  display: flex;
+  margin-top: 5%;
+  letter-spacing: 1.2rem;
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  font-size: 24px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.text-primary {
+  text-align: justify;
+  line-height: 4.5rem;
+  font-size: 18px;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-weight: 400;
+  line-height: 2rem;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  background-color: var(--color-main);
+}
+.text-secondary {
+  text-align: justify;
+  line-height: 4.5rem;
+  font-size: 18px;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-weight: 400;
+  line-height: 2rem;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  background-color: var(--color-secondary);
+}
+ul {
+  text-align: justify;
+  line-height: 4.5rem;
+  font-size: 18px;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-weight: 400;
+  line-height: 2rem;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  background-color: var(--color-primary);
+}
+
+li {
+  list-style-type: none;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  line-height: 1.2rem;
+}
+a:hover {
+  color: rgba(0, 0, 0, 50%);
+}
+.image-portfolio {
+  width: 100%; /* Full width */
+  height: 100vh; /* Full height, filling the viewport */
+  object-fit: cover; /* Ensures the image scales without distortion */
+  display: block;
+}
+
+.image-main {
+  width: 100%; /* Full width */
+  height: 100vh; /* Full height, filling the viewport */
+  object-fit: cover; /* Ensures the image scales without distortion */
+  display: inline-flex;
+  padding: 0px;
+  margin: 0%;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 equal-width columns */
+  gap: 10px; /* Adds spacing between inputs */
+  padding: 20px;
+}
+.image-gallery-thumbnail img {
+  width: auto;
+  height: auto;
+  padding: 0.5rem;
 }
