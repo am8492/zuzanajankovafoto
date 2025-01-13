@@ -234,15 +234,18 @@ const Portfolio = [
 ];
 export default function PortfolioGallery() {
   return (
-    <div>
-      <ImageGallery
-        items={Portfolio}
-        showPlayButton={true}
-        showFullscreenButton={true}
-        slideInterval={5000}
-        slideOnThumbnailOver={true}
-        showIndex={true}
-      ></ImageGallery>
+    <div className="bg-colorPrimary">
+      <section id="portfolio">
+        <h2 className="titleH2 bg-colorPrimary">PORTFOLIO</h2>
+        <ImageGallery
+          items={Portfolio}
+          showPlayButton={true}
+          showFullscreenButton={true}
+          slideInterval={4000}
+          slideOnThumbnailOver={true}
+          showIndex={true}
+        ></ImageGallery>
+      </section>
     </div>
   );
 }

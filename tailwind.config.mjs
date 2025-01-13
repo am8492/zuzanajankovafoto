@@ -11,6 +11,7 @@ export default {
       colors: {
         buttonSendEmail: "#f8f1ee",
         foreground: "var(--foreground)",
+        colorPrimary: "#f8f1ee",
       },
     },
   },

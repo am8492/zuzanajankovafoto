@@ -5,10 +5,52 @@ import PortfolioGallery from "./portfolio";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import ContactForm from "./contactform";
+import Pricing from "./pricing";
+import Services from "./services";
 
 export default function Home() {
   return (
     <div>
+      <header className="bg-white flex justify-end items-center h-20 ">
+        {/* Logo */}
+
+        <div className="flex items-center justify-start">
+          <img
+            src="logo/logo.png"
+            alt="Zuzana Jankova Logo"
+            className="py-2 h-12 md:h-20 align-middle"
+          />
+        </div>
+        <nav className="flex justify-end items-center">
+          <ul className="flex space-x-4 text-sm md:text-lg font-semibold">
+            <li>
+              <a
+                href="#portfolio"
+                className="text-gray-700 hover:text-black transition-colors"
+              >
+                PORTFOLIO
+              </a>
+            </li>
+            <li>
+              <a
+                href="#cenik"
+                className="text-gray-700 hover:text-black transition-colors"
+              >
+                CENÍK
+              </a>
+            </li>
+            <li>
+              <a
+                href="#kontakt"
+                className="text-gray-700 hover:text-black transition-colors"
+              >
+                KONTAKT
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
       <img src="photos/DSC_0115.jpg" className="image-main" />
       <h2 className="titleH2">RODINNÁ FOTOGRAFKA</h2>
       <p className="text-primary px-4 md:px-32 font-extrabold">
@@ -38,7 +80,18 @@ export default function Home() {
           mám vždy připravený na další roztančený příběh! 📸✨
         </p>
       </div>
-      <div className="text-primary md:px-32 font-extrabold">
+      <Services />
+      <div className="bg-white">
+        <PortfolioGallery />
+      </div>
+      <Pricing />
+      <ContactForm />
+
+      <footer></footer>
+    </div>
+  );
+}
+/*  <div className="text-primary md:px-32 font-extrabold">
         <h2 className="titleH2">CO FOTÍM</h2>
         <ul className="px-4 md:px-32 m-1 space-y-10 ">
           <li>
@@ -67,12 +120,4 @@ export default function Home() {
             </p>
           </li>
         </ul>
-      </div>
-      <div className="bg-white">
-        <h2 className="titleH2">PORTFOLIO</h2>
-        <PortfolioGallery />
-      </div>
-      <ContactForm />
-    </div>
-  );
-}
+      </div>*/
