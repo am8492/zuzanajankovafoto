@@ -40,7 +40,7 @@ function ContactForm() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        to: "postmaster@zuzanajankovafoto.cz",
+        to: "jankovazuzana0@gmail.com",
         subject: "Nová poptávka po focení",
         text: emailBody,
       }),

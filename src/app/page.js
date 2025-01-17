@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 import "./globals.css";
 import PortfolioGallery from "./portfolio";
 import ImageGallery from "react-image-gallery";
@@ -7,10 +8,13 @@ import "react-image-gallery/styles/css/image-gallery.css";
 import ContactForm from "./contactform";
 import Pricing from "./pricing";
 import Services from "./services";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <div>
+      <link rel="icon" href="/favicon.ico" sizes="any" />
+
       <header className="bg-white flex justify-end items-center h-20 ">
         {/* Logo */}
 
@@ -20,6 +24,24 @@ export default function Home() {
             alt="Zuzana Jankova Logo"
             className="py-2 h-12 md:h-20 align-middle"
           />
+        </div>
+        <div className="flex space-x-4">
+          <a
+            href="https://facebook.com/yourprofile"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-blue-500"
+          >
+            <FaFacebook size={24} />
+          </a>
+          <a
+            href="https://instagram.com/yourprofile"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-pink-500"
+          >
+            <FaInstagram size={24} />
+          </a>
         </div>
         <nav className="flex justify-end items-center">
           <ul className="flex space-x-4 text-sm md:text-lg font-semibold">

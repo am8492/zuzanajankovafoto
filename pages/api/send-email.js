@@ -6,7 +6,7 @@ export default async function handler(req, res) {
 
     // Configure SMTP transporter
     const transporter = nodemailer.createTransport({
-      host: "smtp.zoner.com", // Replace with your SMTP host
+      host: "smtp.gmail.com", // Replace with your SMTP host
       port: 465, // Replace with your SMTP port (587 for TLS, 465 for SSL)
       secure: true, // Set to true for port 465
       auth: {
@@ -43,7 +43,7 @@ export default async function handler(req, res) {
       // send mail
       transporter.sendMail(
         {
-          from: `"Your Name" <${process.env.EMAIL_USER}>`, // Sender's email
+          from: `"Zuzana Jankova Foto"`, // Sender's email
           to, // Recipient's email
           subject, // Email subject
           text, // Email body
