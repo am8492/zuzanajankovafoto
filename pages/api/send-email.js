@@ -43,7 +43,7 @@ export default async function handler(req, res) {
       // send mail
       transporter.sendMail(
         {
-          from: `"Zuzana Jankova Foto"`, // Sender's email
+          from: "jankovazuzana0@gmail.com", // Sender's email
           to, // Recipient's email
           subject, // Email subject
           text, // Email body
