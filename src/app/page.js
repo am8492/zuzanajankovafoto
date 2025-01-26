@@ -9,6 +9,7 @@ import ContactForm from "./contactform";
 import Pricing from "./pricing";
 import Services from "./services";
 import Head from "next/head";
+import Footer from "./footer";
 
 export default function Home() {
   return (
@@ -109,7 +110,7 @@ export default function Home() {
       <Pricing />
       <ContactForm />
 
-      <footer></footer>
+      <Footer />
     </div>
   );
 }
