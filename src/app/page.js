@@ -114,33 +114,3 @@ export default function Home() {
     </div>
   );
 }
-/*  <div className="text-primary md:px-32 font-extrabold">
-        <h2 className="titleH2">CO FOTÍM</h2>
-        <ul className="px-4 md:px-32 m-1 space-y-10 ">
-          <li>
-            <p>
-              Rodinné příběhy: Od každodenních okamžiků po výjimečné chvíle.
-              Zachytím, co dělá vaši rodinu jedinečnou.
-            </p>
-          </li>
-          <li>
-            <p>
-              Partnerské fotografie: Milostné příběhy plné emocí a úsměvů. Ať už
-              slavíte výročí, zasnoubení, nebo chcete jen krásné vzpomínky na
-              společný čas.
-            </p>
-          </li>
-          <li>
-            <p>
-              Newborn: První dny vašeho miminka jsou nenahraditelné. Jemné
-              fotky, které zachytí tyto křehké okamžiky.{" "}
-            </p>
-          </li>
-          <li>
-            <p>
-              Portréty: Fotky, které ukáží vaši osobnost v tom nejlepším světle.
-              Ať už pro radost, jako dárek, nebo na památku.{" "}
-            </p>
-          </li>
-        </ul>
-      </div>*/

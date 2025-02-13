@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios"; // Make sure axios is installed: npm install axios
+import axios from "axios";
 
 function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);

@@ -17,5 +17,4 @@ export default {
   },
   plugins: [],
 };
-//HEX: #f8f1ee pozadi stranek
-//HEX: #0c0802 barva textu
+
