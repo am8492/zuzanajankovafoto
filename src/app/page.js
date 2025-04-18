@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import React from "react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
@@ -10,6 +11,7 @@ import Pricing from "./pricing";
 import Services from "./services";
 import Head from "next/head";
 import Footer from "./footer";
+import Index from "./Gallery.js";
 
 export default function Home() {
   return (
@@ -74,7 +76,11 @@ export default function Home() {
         </nav>
       </header>
 
-      <img src="photos/DSC_0115.jpg" className="image-main" />
+      <img
+        src="photos/DSC_0115.jpg"
+        className="image-main"
+        alt="Uvodni fotka"
+      />
       <h2 className="titleH2">RODINNÁ FOTOGRAFKA</h2>
       <p className="text-primary px-4 md:px-32 font-extrabold">
         Jmenuji se Zuzka a jsem rodinná fotografka, která miluje zachycovat ty
@@ -109,7 +115,7 @@ export default function Home() {
       </div>
       <Pricing />
       <ContactForm />
-
+      <Index />
       <Footer />
     </div>
   );

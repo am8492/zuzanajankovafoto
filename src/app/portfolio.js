@@ -1,5 +1,9 @@
-import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
+import ImageGallery from "react-image-gallery";
+
+
+
+
 const Portfolio = [
   {
     original: "photos/DSC_0029.jpg",
@@ -232,6 +236,7 @@ const Portfolio = [
     thumbnail: "photos/DSC_1018.jpg",
   },
 ];
+
 export default function PortfolioGallery() {
   return (
     <div className="bg-colorPrimary">
@@ -248,4 +253,4 @@ export default function PortfolioGallery() {
       </section>
     </div>
   );
-}
+} 
