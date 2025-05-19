@@ -1,5 +1,6 @@
 import path from "path";
-import React from "react"; // <-- Add this line
+import React from "react"; 
+
 
 export async function getStaticProps() {
   const photosDirectory = path.join(process.cwd(), "public", "photos");
@@ -15,16 +16,4 @@ export async function getStaticProps() {
       photos,
     },
   };
-}
-
-export default function Index({ photos = [] }) {
-  return (
-    <div>
-      {photos.length > 0 ? (
-        photos.map((photo, index) => <p key={index}>{photo}</p>)
-      ) : (
-        <p>No photos found </p>
-      )}
-    </div>
-  );
 }

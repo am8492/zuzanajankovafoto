@@ -11,7 +11,8 @@ import Pricing from "./pricing";
 import Services from "./services";
 import Head from "next/head";
 import Footer from "./footer";
-import Index from "./Gallery.js";
+import ShowPhotos from "../../lib/Gallery.js";
+
 
 export default function Home() {
   return (
@@ -115,7 +116,6 @@ export default function Home() {
       </div>
       <Pricing />
       <ContactForm />
-      <Index />
       <Footer />
     </div>
   );
