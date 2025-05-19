@@ -26,7 +26,7 @@ export default function Pricing() {
             </p>
             <br />
             <p className="text-gray-600 text-sm mt-2">
-              <strong>VELKÝ BALÍČEK:</strong> cca 1-1,5 hodiny focení, až 40
+              <strong>VELKÝ BALÍČEK:</strong> cca 1-1,5 hodiny focení, až 25
               fotek
             </p>
             <p className="text-gray-600 text-sm mt-2">
@@ -40,7 +40,7 @@ export default function Pricing() {
               Portrétní fotografie
             </strong>
             <p className="text-gray-600 text-sm">
-              cca1 hodina focení, až 40 fotek
+              cca1 hodina focení, až 25 fotek
             </p>
             <p className="text-gray-600 text-sm mt-2">
               <strong> 1500Kč</strong>
