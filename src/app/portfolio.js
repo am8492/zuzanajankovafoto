@@ -1,5 +1,5 @@
 import { list } from "@vercel/blob";
-import ImageGallery from "react-image-gallery";
+//import ImageGallery from "react-image-gallery";
 
 
 const Portfolio = [

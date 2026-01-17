@@ -5,13 +5,15 @@ import React from "react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import "./globals.css";
 import PortfolioGallery from "./portfolio";
-import ImageGallery from "react-image-gallery";
-import "react-image-gallery/styles/css/image-gallery.css";
+//import ImageGallery from "react-image-gallery";
+//import "react-image-gallery/styles/css/image-gallery.css";
 import ContactForm from "./contactform";
 import Pricing from "./pricing";
 import Services from "./services";
 import Head from "next/head";
 import Footer from "./footer";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
 import Photos from "./gallery";
 
