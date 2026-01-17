@@ -1,6 +1,5 @@
 "use client";
 
-//import ImageGallery from "react-image-gallery";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { useEffect, useState } from "react";
@@ -27,8 +26,6 @@ export default function Photos() {
 
   const galleryItems = photos.map((photo) => ({
     src: photo.url,
-    /*  original: photo.url,
-    thumbnail: photo.url, */
   }));
   console.log(photos.url);
 
@@ -49,10 +46,8 @@ export default function Photos() {
         </section>
       </div>
       <Swiper
-        // modules={[Navigation, Pagination]}
-        spaceBetween={16}
+        spaceBetween={8}
         slidesPerView={"auto"} // auto width for horizontal row
-        navigation
         pagination={{ clickable: true }}
         className="mySwiper"
       >
@@ -73,51 +68,6 @@ export default function Photos() {
           </SwiperSlide>
         ))}
       </Swiper>{" "}
- 
     </section>
   );
 }
-/* 
-
-  return (
-       <button
-        type="button"
-        onClick={() => setOpen(true)}
-        className="bg-indigo-600 md:col-span-2 text-white py-3 px-8 rounded-lg font-semibold tracking-wide shadow-md hover:bg-indigo-700 transition duration-200"
-      >
-        Otevřít
-      </button>
-     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {galleryItems.map((slide, i) => (
-                <img
-                  key={i}
-                  src={slide.src}
-                  alt=""
-                  className="cursor-pointer rounded shadow hover:opacity-90 transition"
-                  onClick={() => {
-                    setIndex(i);
-                    setOpen(true);
-                  }}
-                />
-              ))}
-            </div>
-    <section>
-      <div className="bg-colorPrimary">
-        <section id="portfolio">
-          <h2 className="titleH2 bg-colorPrimary">PORTFOLIO</h2>
-          <Lightbox
-            slides={galleryItems}
-            open={open}
-            close={() => setOpen(false)}
-            /* showPlayButton={true}
-            showFullscreenButton={true}
-            slideInterval={4000}
-            slideOnThumbnailOver={true}
-            showIndex={true} 
-          ></Lightbox>
-        </section>
-      </div>
-    </section>
-  );
-  
-   */

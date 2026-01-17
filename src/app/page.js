@@ -2,27 +2,31 @@
 "use client";
 
 import React from "react";
+import { useEffect, useState } from "react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import "./globals.css";
-import PortfolioGallery from "./portfolio";
-//import ImageGallery from "react-image-gallery";
-//import "react-image-gallery/styles/css/image-gallery.css";
 import ContactForm from "./contactform";
 import Pricing from "./pricing";
 import Services from "./services";
-import Head from "next/head";
 import Footer from "./footer";
-import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-
+import { Menu, X } from "lucide-react";
 import Photos from "./gallery";
 
+const links = [
+  { name: "Portolio", href: "#portfolio" },
+  { name: "Ceník", href: "#cenik" },
+  { name: "Kontakt", href: "#kontakt" },
+];
+
 export default function Home() {
+  const [open, setOpen] = useState(false);
+
   return (
     <div>
       <link rel="icon" href="/favicon.ico" sizes="any" />
 
-      <header className="bg-white flex justify-end items-center h-20 ">
+      <header className="fixed bg-white flex justify-end items-center h-20 ">
         {/* Logo */}
 
         <div className="flex items-center justify-start">
@@ -34,49 +38,57 @@ export default function Home() {
         </div>
         <div className="flex space-x-4">
           <a
-            href="https://facebook.com/yourprofile"
+            href="https://www.facebook.com/Zuzana.jankova.foto"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:text-blue-500"
+            className="text-black hover:text-blue-500"
           >
             <FaFacebook size={24} />
           </a>
           <a
-            href="https://instagram.com/yourprofile"
+            href="https://www.instagram.com/zuzana.jankova.foto"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:text-pink-500"
+            className="text-black hover:text-pink-500"
           >
             <FaInstagram size={24} />
           </a>
         </div>
-        <nav className="flex justify-end items-center">
-          <ul className="flex space-x-4 text-sm md:text-lg font-semibold">
-            <li>
+        <nav className="flex justify-end items-center mr-8">
+          {/* Desktop Links */}
+          <div className="hidden md:flex space-x-6 text-transform: uppercase">
+            {links.map((link) => (
               <a
-                href="#portfolio"
-                className="text-gray-700 hover:text-black transition-colors"
+                key={link.name}
+                href={link.href}
+                className="text-black-700 hover:text-indigo-600 transition"
               >
-                PORTFOLIO
+                {link.name}
               </a>
-            </li>
-            <li>
-              <a
-                href="#cenik"
-                className="text-gray-700 hover:text-black transition-colors"
-              >
-                CENÍK
-              </a>
-            </li>
-            <li>
-              <a
-                href="#kontakt"
-                className="text-gray-700 hover:text-black transition-colors"
-              >
-                KONTAKT
-              </a>
-            </li>
-          </ul>
+            ))}
+          </div>
+          <div className="md:hidden ">
+            <button
+              onClick={() => setOpen(!open)}
+              className="text-gray-700 hover:text-indigo-600 transition"
+            >
+              {open ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+          {/* Mobile Menu */}
+          {open && (
+            <div className=" md:hidden px-8 mr:0 pb-2 mt-16 space-y-2 bg-white pr-8 rounded-xl justify-items-center">
+              {links.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="block text-gray-700 hover:text-indigo-600 hover:bg-gray-800 transition text-transform: uppercase bg-white "
+                >
+                  {link.name}
+                </a>
+              ))}
+            </div>
+          )}
         </nav>
       </header>
 
@@ -124,3 +136,29 @@ export default function Home() {
     </div>
   );
 }
+/* <ul className="flex space-x-4 text-sm md:text-lg font-semibold">
+            <li>
+              <a
+                href="#portfolio"
+                className="text-gray-700 hover:text-black transition-colors"
+              >
+                PORTFOLIO
+              </a>
+            </li>
+            <li>
+              <a
+                href="#cenik"
+                className="text-gray-700 hover:text-black transition-colors"
+              >
+                CENÍK
+              </a>
+            </li>
+            <li>
+              <a
+                href="#kontakt"
+                className="text-gray-700 hover:text-black transition-colors"
+              >
+                KONTAKT
+              </a>
+            </li>
+          </ul>*/
