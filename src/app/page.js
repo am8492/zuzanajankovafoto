@@ -82,7 +82,7 @@ export default function Home() {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="block text-gray-700 hover:text-indigo-600 hover:bg-gray-800 transition text-transform: uppercase bg-white "
+                  className="block text-gray-700 hover:text-indigo-600  transition text-transform: uppercase bg-white "
                 >
                   {link.name}
                 </a>
