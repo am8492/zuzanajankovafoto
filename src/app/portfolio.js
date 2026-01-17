@@ -1,7 +1,5 @@
-import "react-image-gallery/styles/css/image-gallery.css";
+import { list } from "@vercel/blob";
 import ImageGallery from "react-image-gallery";
-
-
 
 
 const Portfolio = [
@@ -253,4 +251,5 @@ export default function PortfolioGallery() {
       </section>
     </div>
   );
-} 
+}
+ 

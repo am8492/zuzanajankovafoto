@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+
 import React from "react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import "./globals.css";
@@ -11,8 +12,8 @@ import Pricing from "./pricing";
 import Services from "./services";
 import Head from "next/head";
 import Footer from "./footer";
-import ShowPhotos from "../../lib/Gallery.js";
 
+import Photos from "./gallery";
 
 export default function Home() {
   return (
@@ -112,10 +113,11 @@ export default function Home() {
       </div>
       <Services />
       <div className="bg-white">
-        <PortfolioGallery />
+        <Photos />
       </div>
       <Pricing />
       <ContactForm />
+
       <Footer />
     </div>
   );
