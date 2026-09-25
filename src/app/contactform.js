@@ -49,14 +49,12 @@ function ContactForm() {
 
     const data = await response.json();
     if (response.ok) {
-      alert("Email sent successfully!");
+      console.log("Email sent successfully!");
     } else {
       console.error("Error sending email:", data.error);
-      alert("Failed to send email.");
     }
   };
 
-  
   return (
     <div className="max-w-3xl mx-auto p-6 ">
       {!isSubmitted ? (
