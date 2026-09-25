@@ -2,7 +2,7 @@
 "use client";
 
 import React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import "./globals.css";
 import ContactForm from "./contactform";
@@ -27,8 +27,6 @@ export default function Home() {
       <link rel="icon" href="/favicon.ico" sizes="any" />
 
       <header className="fixed bg-white flex justify-end items-center h-20 ">
-        {/* Logo */}
-
         <div className="flex items-center justify-start">
           <img
             src="logo/logo.png"
@@ -54,8 +52,8 @@ export default function Home() {
             <FaInstagram size={24} />
           </a>
         </div>
+      {/* Desktop Menu */}
         <nav className="flex justify-end items-center mr-8">
-          {/* Desktop Links */}
           <div className="hidden md:flex space-x-6 text-transform: uppercase">
             {links.map((link) => (
               <a
@@ -126,39 +124,10 @@ export default function Home() {
         </p>
       </div>
       <Services />
-      <div className="bg-white">
-        <Photos />
-      </div>
+      <Photos />
       <Pricing />
       <ContactForm />
-
       <Footer />
     </div>
   );
 }
-/* <ul className="flex space-x-4 text-sm md:text-lg font-semibold">
-            <li>
-              <a
-                href="#portfolio"
-                className="text-gray-700 hover:text-black transition-colors"
-              >
-                PORTFOLIO
-              </a>
-            </li>
-            <li>
-              <a
-                href="#cenik"
-                className="text-gray-700 hover:text-black transition-colors"
-              >
-                CENÍK
-              </a>
-            </li>
-            <li>
-              <a
-                href="#kontakt"
-                className="text-gray-700 hover:text-black transition-colors"
-              >
-                KONTAKT
-              </a>
-            </li>
-          </ul>*/

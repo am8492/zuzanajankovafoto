@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import axios from "axios";
 
 function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -56,6 +55,8 @@ function ContactForm() {
       alert("Failed to send email.");
     }
   };
+
+  
   return (
     <div className="max-w-3xl mx-auto p-6 ">
       {!isSubmitted ? (

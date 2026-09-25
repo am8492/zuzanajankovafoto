@@ -3,10 +3,7 @@
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { useEffect, useState } from "react";
-import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
-
-// Swiper imports
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -47,14 +44,14 @@ export default function Photos() {
       </div>
       <Swiper
         spaceBetween={8}
-        slidesPerView={"auto"} // auto width for horizontal row
+        slidesPerView={"auto"} 
         pagination={{ clickable: true }}
         className="mySwiper"
       >
         {galleryItems.map((slide, i) => (
           <SwiperSlide
             key={i}
-            style={{ width: "200px" }} // each slide fixed width
+            style={{ width: "200px" }} 
           >
             <img
               src={slide.src}

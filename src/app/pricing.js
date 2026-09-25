@@ -24,7 +24,6 @@ export default function Pricing() {
             <p className="text-gray-600 text-sm mt-2">
               <strong> 900Kč</strong>
             </p>
-            <br />
             <p className="text-gray-600 text-sm mt-2">
               <strong>VELKÝ BALÍČEK:</strong> cca 1-1,5 hodiny focení, až 25
               fotek

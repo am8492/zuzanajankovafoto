@@ -35,4 +35,3 @@ export default function Footer() {
     </div>
   );
 }
-// <div className="flex flex-col-2 space-x-4 justify-center">
