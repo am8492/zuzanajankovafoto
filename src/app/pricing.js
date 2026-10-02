@@ -22,14 +22,14 @@ export default function Pricing() {
               <strong>MALÝ BALÍČEK:</strong> cca 30 minut focení, až 15 fotek
             </p>
             <p className="text-gray-600 text-sm mt-2">
-              <strong> 900Kč</strong>
+              <strong> 1800Kč</strong>
             </p>
             <p className="text-gray-600 text-sm mt-2">
               <strong>VELKÝ BALÍČEK:</strong> cca 1-1,5 hodiny focení, až 25
               fotek
             </p>
             <p className="text-gray-600 text-sm mt-2">
-              <strong> 1800Kč</strong>
+              <strong> 2500Kč</strong>
             </p>
           </div>
 
@@ -42,7 +42,7 @@ export default function Pricing() {
               cca1 hodina focení, až 25 fotek
             </p>
             <p className="text-gray-600 text-sm mt-2">
-              <strong> 1500Kč</strong>
+              <strong> 2500Kč</strong>
             </p>
           </div>
 
@@ -53,7 +53,7 @@ export default function Pricing() {
             </strong>
             <p className="text-gray-600 text-sm">
               až 2 hodiny focení, přijedu k vám domů, až 15 fotek
-              <br /> <strong> 2000Kč</strong>
+              <br /> <strong> 3000Kč</strong>
             </p>
           </div>
         </div>

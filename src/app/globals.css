@@ -3,17 +3,17 @@
 @import "tailwindcss/utilities";
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color: #0c0802;
-  background-color: #f8f1ee;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  --color-main: #f8f1ee;
-  --color-secondary: white;
-  padding: 0px;
+  --font-sans: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --color-bg: #f8f1ee;
+  --color-surface: #ffffff;
+  --brand-500: #5b21b6;
+  --brand-600: #4f46e5;
+  --muted: #6b7280;
+  --text: #0c0b0a;
+  --max-width: 1200px;
+  color: var(--text);
+  background-color: var(--color-bg);
+  padding: 0;
   margin: 0;
 }
 
@@ -24,123 +24,194 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
   scroll-behavior: smooth;
   box-sizing: border-box;
+  font-family: var(--font-sans);
 }
+
+/* Hero image - responsive and reusable */
 .image-main {
   width: 100%;
-  height: 100vh;
+  height: 70vh;
+  min-height: 420px;
   object-fit: cover;
-  display: inline-flex;
-  padding: 0px;
-  margin: 0%;
+  object-position: center;
+  display: block;
 }
+
+.container-centered {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 a {
-  color: black;
-  font-size: 18px;
+  color: inherit;
+  font-size: 16px;
   text-decoration: none;
 }
-.titleH2 {
-  justify-content: center;
-  text-align: center;
-  display: flex;
-  margin-top: 5%;
-  letter-spacing: 1.1rem;
-  margin: 0;
-  padding-top: 30px;
-  padding-bottom: 15px;
-  padding-left: 15px;
-  font-size: 40px;
-  font-weight: 300;
-}
-.titleH3 {
-  justify-content: center;
-  text-align: justify;
-  display: flex;
-  margin-top: 5%;
-  letter-spacing: 1.2rem;
-  margin: 0;
-  padding-top: 30px;
-  padding-bottom: 15px;
-  font-size: 32px;
-  font-weight: 300;
-  text-transform: uppercase;
-}
-.titleH4 {
-  justify-content: center;
-  text-align: justify;
-  display: flex;
-  margin-top: 5%;
-  letter-spacing: 1.2rem;
-  margin: 0;
-  padding-top: 30px;
-  padding-bottom: 15px;
-  font-size: 24px;
-  font-weight: 300;
-  text-transform: uppercase;
-}
-.text-primary {
-  text-align: justify;
-  line-height: 4.5rem;
-  font-size: 18px;
-  margin-left: 10%;
-  margin-right: 10%;
-  font-weight: 400;
-  line-height: 2rem;
-  padding-top: 15px;
-  padding-bottom: 10px;
-  background-color: var(--color-main);
-}
-.text-secondary {
-  text-align: justify;
-  line-height: 4.5rem;
-  font-size: 18px;
-  margin-left: 10%;
-  margin-right: 10%;
-  font-weight: 400;
-  line-height: 2rem;
-  padding-top: 15px;
-  padding-bottom: 10px;
-  background-color: var(--color-secondary);
-}
-ul {
-  text-align: justify;
-  line-height: 4.5rem;
-  font-size: 18px;
 
-  margin-right: 5%;
+.titleH2 {
+  display: block;
+  text-align: center;
+  margin: 1.5rem 0;
+  letter-spacing: 0.08em;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1.875rem; /* 30px */
+  font-weight: 600;
+}
+
+.titleH2::after {
+  display: block;
+  width: 3.5rem;
+  height: 3px;
+  margin: 1rem auto 0;
+  background: var(--brand-600);
+  content: "";
+}
+
+.about-section {
+  padding: 5rem 1.5rem;
+  background: #f5ece7;
+  border-top: 1px solid #eadbd3;
+  border-bottom: 1px solid #eadbd3;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.8fr) minmax(0, 1.7fr);
+  gap: clamp(2rem, 7vw, 7rem);
+  align-items: start;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.about-title {
+  margin: 0;
+  padding-top: 0.8rem;
+  color: #332822;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.about-title::after {
+  display: block;
+  width: 3.5rem;
+  height: 3px;
+  margin-top: 1.25rem;
+  background: var(--brand-600);
+  content: "";
+}
+
+.about-copy {
+  max-width: 48rem;
+}
+
+.about-copy p {
+  margin: 0 0 1.35rem;
+  color: #49413d;
+  font-size: 1.0625rem;
   font-weight: 400;
-  line-height: 1rem;
-  padding-top: 15px;
-  padding-bottom: 10px;
-  background-color: var(--color-main);
+  line-height: 1.95;
+}
+
+.about-copy .about-lead {
+  margin-bottom: 1.5rem;
+  color: #332822;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  line-height: 1.7;
+}
+
+.about-copy .about-finale {
+  margin-bottom: 0;
+  padding-left: 1rem;
+  border-left: 2px solid var(--brand-600);
+  color: #332822;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .about-section {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .about-title {
+    font-size: 1.875rem;
+  }
+}
+
+.titleH3 {
+  text-align: left;
+  font-size: 1.25rem; /* 20px */
+  font-weight: 500;
+  margin: 1rem 0;
+  text-transform: uppercase;
+}
+
+.titleH4 {
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0.75rem 0;
+  text-transform: uppercase;
+}
+
+.text-primary {
+  text-align: left;
+  line-height: 1.8rem;
+  font-size: 1rem;
+  margin: 0 auto;
+  max-width: 56rem;
+  font-weight: 400;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.text-secondary {
+  text-align: left;
+  line-height: 1.8rem;
+  font-size: 1rem;
+  margin: 0 auto;
+  max-width: 56rem;
+  font-weight: 400;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+ul {
+  padding-left: 1rem;
+  margin: 0.5rem 0;
 }
 
 li {
   list-style-type: none;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  line-height: 1.2rem;
-}
-a:hover {
-  color: rgba(0, 0, 0, 50%);
-}
-.image-portfolio {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  display: block;
 }
 
-.image-main {
+.image-gallery-thumbnail img {
+  width: auto;
+  height: auto;
+  padding: 0.5rem;
+}
+
+a:hover {
+  color: var(--brand-600);
+}
+
+.image-portfolio {
   width: 100%;
-  height: 100vh;
+  height: 60vh;
   object-fit: cover;
-  display: inline-flex;
-  padding: 0px;
-  margin: 0%;
+  display: block;
 }
 
 form {
@@ -148,9 +219,4 @@ form {
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   padding: 20px;
-}
-.image-gallery-thumbnail img {
-  width: auto;
-  height: auto;
-  padding: 0.5rem;
 }
